@@ -1,0 +1,15 @@
+C:\BookstoreApi\BookstoreRepository\bin\Debug\netcoreapp2.1\BookstoreRepository.deps.json
+C:\BookstoreApi\BookstoreRepository\bin\Debug\netcoreapp2.1\BookstoreRepository.runtimeconfig.json
+C:\BookstoreApi\BookstoreRepository\bin\Debug\netcoreapp2.1\BookstoreRepository.runtimeconfig.dev.json
+C:\BookstoreApi\BookstoreRepository\bin\Debug\netcoreapp2.1\BookstoreRepository.dll
+C:\BookstoreApi\BookstoreRepository\bin\Debug\netcoreapp2.1\BookstoreRepository.pdb
+C:\BookstoreApi\BookstoreRepository\bin\Debug\netcoreapp2.1\BookstoreModel.dll
+C:\BookstoreApi\BookstoreRepository\bin\Debug\netcoreapp2.1\BookstoreModel.pdb
+C:\BookstoreApi\BookstoreRepository\obj\Debug\netcoreapp2.1\BookstoreRepository.csprojAssemblyReference.cache
+C:\BookstoreApi\BookstoreRepository\obj\Debug\netcoreapp2.1\BookstoreRepository.AssemblyInfoInputs.cache
+C:\BookstoreApi\BookstoreRepository\obj\Debug\netcoreapp2.1\BookstoreRepository.AssemblyInfo.cs
+C:\BookstoreApi\BookstoreRepository\obj\Debug\netcoreapp2.1\BookstoreRepository.csproj.CopyComplete
+C:\BookstoreApi\BookstoreRepository\obj\Debug\netcoreapp2.1\BookstoreRepository.dll
+C:\BookstoreApi\BookstoreRepository\obj\Debug\netcoreapp2.1\BookstoreRepository.pdb
+C:\BookstoreApi\BookstoreRepository\obj\Debug\netcoreapp2.1\BookstoreRepository.genruntimeconfig.cache
+C:\BookstoreApi\BookstoreRepository\obj\Debug\netcoreapp2.1\BookstoreRepository.csproj.CoreCompileInputs.cache

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "IT2I3soheeJ2nfXZKjGM2i2yQE4qiEKIKk9Hjz+YdPDjlOzzRgfrCDrGAUE3WBuMAxCuDmzt28a7//MnqL7YVg==",
+  "success": true,
+  "projectFilePath": "C:\\BookstoreApi\\ClassLibrary1\\ClassLibrary1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Pritam\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

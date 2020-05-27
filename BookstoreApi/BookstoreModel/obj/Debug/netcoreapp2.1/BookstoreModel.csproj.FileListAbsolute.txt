@@ -1,0 +1,12 @@
+C:\BookstoreApi\BookstoreModel\bin\Debug\netcoreapp2.1\BookstoreModel.deps.json
+C:\BookstoreApi\BookstoreModel\bin\Debug\netcoreapp2.1\BookstoreModel.runtimeconfig.json
+C:\BookstoreApi\BookstoreModel\bin\Debug\netcoreapp2.1\BookstoreModel.runtimeconfig.dev.json
+C:\BookstoreApi\BookstoreModel\bin\Debug\netcoreapp2.1\BookstoreModel.dll
+C:\BookstoreApi\BookstoreModel\bin\Debug\netcoreapp2.1\BookstoreModel.pdb
+C:\BookstoreApi\BookstoreModel\obj\Debug\netcoreapp2.1\BookstoreModel.csprojAssemblyReference.cache
+C:\BookstoreApi\BookstoreModel\obj\Debug\netcoreapp2.1\BookstoreModel.AssemblyInfoInputs.cache
+C:\BookstoreApi\BookstoreModel\obj\Debug\netcoreapp2.1\BookstoreModel.AssemblyInfo.cs
+C:\BookstoreApi\BookstoreModel\obj\Debug\netcoreapp2.1\BookstoreModel.csproj.CoreCompileInputs.cache
+C:\BookstoreApi\BookstoreModel\obj\Debug\netcoreapp2.1\BookstoreModel.dll
+C:\BookstoreApi\BookstoreModel\obj\Debug\netcoreapp2.1\BookstoreModel.pdb
+C:\BookstoreApi\BookstoreModel\obj\Debug\netcoreapp2.1\BookstoreModel.genruntimeconfig.cache
