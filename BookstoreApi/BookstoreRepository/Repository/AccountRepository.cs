@@ -9,6 +9,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Options;
+using System.Linq;
 
 namespace BookstoreRepository.Repository
 {
@@ -39,15 +40,15 @@ namespace BookstoreRepository.Repository
 
         public async Task<string> Login(LoginModel login)
         {
-            var result = userContext.UserDetail.Find(login.Emailid);
-            if (result != null)
+            var result = userContext.UserDetail.Where(i => i.Emailid == login.Emailid && i.Password == login.Password).SingleOrDefault();
+                if (result != null)
             {
                 var tokenhandler = new JwtSecurityTokenHandler();
                 var tokenDescriptor = new SecurityTokenDescriptor
                 {
                     Subject = new ClaimsIdentity(new Claim[]
                     {
-                       new Claim(ClaimTypes.Email,result.Emailid)
+                       new Claim(ClaimTypes.Email,login.Emailid)
                     }),
                     Expires = DateTime.UtcNow.AddDays(20),
                     SigningCredentials = new SigningCredentials(
