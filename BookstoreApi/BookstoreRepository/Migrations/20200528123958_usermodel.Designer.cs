@@ -3,14 +3,16 @@ using BookstoreRepository.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BookstoreRepository.Migrations
 {
     [DbContext(typeof(UserContext))]
-    partial class UserContextModelSnapshot : ModelSnapshot
+    [Migration("20200528123958_usermodel")]
+    partial class usermodel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,11 +45,8 @@ namespace BookstoreRepository.Migrations
 
             modelBuilder.Entity("BookstoreModel.Model.UserModel", b =>
                 {
-                    b.Property<int>("Userid")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Emailid");
+                    b.Property<string>("Emailid")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("FirstName");
 
@@ -55,7 +54,9 @@ namespace BookstoreRepository.Migrations
 
                     b.Property<string>("Password");
 
-                    b.HasKey("Userid");
+                    b.Property<int>("Userid");
+
+                    b.HasKey("Emailid");
 
                     b.ToTable("UserDetail");
                 });

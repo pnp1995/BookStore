@@ -15,12 +15,12 @@ namespace BookstoreManager.Manager
         {
             this.accountRepository = accountRepository;
         }
-        public async Task<string> Adduser(UserModel userModel)
+        public async Task<string> Register(UserModel userModel)
         {
 
             try
             {
-                await this.accountRepository.Adduser(userModel);
+                await this.accountRepository.Register(userModel);
                 return "Registration Successfully";
             }
             catch (Exception ex)

@@ -33,11 +33,11 @@ namespace BookstoreManager.Manager
             }
         }
 
-        public  Task<BookModel> Image( int Bookid , IFormFile file)
+        public  Task<BookModel> ImageUpload( int Bookid , IFormFile file)
         {
             try
             {
-                var res = bookRepository.Image(Bookid, file);
+                var res = bookRepository.ImageUpload(Bookid, file);
                 return res;
                 //if (file != null && !Bookid.Equals(null))
                 //{

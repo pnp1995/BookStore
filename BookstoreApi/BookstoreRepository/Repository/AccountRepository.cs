@@ -23,10 +23,11 @@ namespace BookstoreRepository.Repository
             settings = _setting.Value;
         }
 
-        public Task Adduser(UserModel userModel)
+        public Task Register(UserModel userModel)
         {
             UserModel userModel1 = new UserModel()
             {
+                Userid = userModel.Userid,
                 FirstName = userModel.FirstName,
                 LastName = userModel.LastName,
                 Emailid = userModel.Emailid,

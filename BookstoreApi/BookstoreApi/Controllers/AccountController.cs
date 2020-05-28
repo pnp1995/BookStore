@@ -27,7 +27,7 @@ namespace BookstoreApi.Controllers
         {
             try
             {
-                var result = await account.Adduser(userModel);
+                var result = await account.Register(userModel);
                 return this.Ok(new { result });
             }
             catch (Exception ex)

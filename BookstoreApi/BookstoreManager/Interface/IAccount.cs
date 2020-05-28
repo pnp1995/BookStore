@@ -8,7 +8,7 @@ namespace BookstoreManager.Interface
 {
   public  interface IAccount
     {
-        Task<string> Adduser(UserModel userModel);
+        Task<string> Register(UserModel userModel);
         Task<string> Login(LoginModel login);
         //Task<UserModel> FindByEmail(string email);
 

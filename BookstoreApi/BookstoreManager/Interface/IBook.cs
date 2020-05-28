@@ -11,7 +11,7 @@ namespace BookstoreManager.Interface
    public interface IBook
     {
        Task<string> AddBook(BookModel bookModel);
-        Task<BookModel> Image( int Bookid, IFormFile formFile);
+        Task<BookModel> ImageUpload( int Bookid, IFormFile formFile);
 
     }
 }

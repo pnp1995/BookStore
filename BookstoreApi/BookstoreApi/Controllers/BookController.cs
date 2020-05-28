@@ -39,15 +39,17 @@ namespace BookstoreApi.Controllers
 
         [HttpPost]
         [Route("image")]
-        public IActionResult Image(int Bookid, IFormFile formFile)
+        public IActionResult ImageUpload(int Bookid, IFormFile formFile)
         {
             try
             {
-                var result = book.Image( Bookid, formFile);
+                var result = book.ImageUpload( Bookid, formFile);
                 return Ok(new { result });
             }
             catch (Exception ex)
             {
+
+
                 return BadRequest(ex.Message);
             }
         }

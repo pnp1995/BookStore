@@ -11,7 +11,7 @@ namespace BookstoreRepository.Interface
   public interface IBookRepository
     {
       Task AddBook(BookModel bookmodel);
-      Task<BookModel> Image(int Bookid, IFormFile file);
+      Task<BookModel> ImageUpload(int Bookid, IFormFile file);
 
     }
 }

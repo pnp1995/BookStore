@@ -39,7 +39,7 @@ namespace BookstoreRepository.Repository
             return Task.Run(() => userContext.SaveChanges());
       }
 
-        public Task<BookModel> Image(int Bookid, IFormFile file)
+        public Task<BookModel> ImageUpload(int Bookid, IFormFile file)
         {
             var path = file.OpenReadStream();
             var fileName = file.FileName;

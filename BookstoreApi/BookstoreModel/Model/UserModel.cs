@@ -8,11 +8,14 @@ namespace BookstoreModel.Model
 {
     public class UserModel
     {
+        [Key]
+        public int Userid { get; set; } 
+
         private string firstName;
 
         public string FirstName
         {
-            set { this.firstName = value; }
+            set { this.firstName = value;}
             get { return this.firstName; }
         }
 
@@ -24,16 +27,16 @@ namespace BookstoreModel.Model
             get { return this.lastName; }
         }
         private string emailid;
-        [Key]
+        
         public string Emailid
         {
             set { this.emailid = value; }
             get { return this.emailid; }
         }
 
-
         private string password;
 
+        [DataType(DataType.Password)]
         public string Password
         {
             set { this.password = value;}

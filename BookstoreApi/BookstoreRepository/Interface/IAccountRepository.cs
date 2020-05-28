@@ -8,7 +8,7 @@ namespace BookstoreRepository.Interface
 {
    public interface IAccountRepository
     {
-        Task Adduser(UserModel userModel);
+        Task Register(UserModel userModel);
         Task<string> Login(LoginModel login);
 
 
