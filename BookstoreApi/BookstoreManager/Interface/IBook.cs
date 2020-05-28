@@ -12,6 +12,7 @@ namespace BookstoreManager.Interface
     {
        Task<string> AddBook(BookModel bookModel);
         Task<BookModel> ImageUpload( int Bookid, IFormFile formFile);
+        IList<BookModel> GetAllBook();
 
     }
 }

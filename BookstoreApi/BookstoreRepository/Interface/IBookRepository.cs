@@ -12,6 +12,7 @@ namespace BookstoreRepository.Interface
     {
       Task AddBook(BookModel bookmodel);
       Task<BookModel> ImageUpload(int Bookid, IFormFile file);
+        IList<BookModel> GetAllBook();
 
     }
 }

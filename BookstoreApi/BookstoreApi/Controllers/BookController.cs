@@ -54,6 +54,23 @@ namespace BookstoreApi.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("list")]
+        public IActionResult GetProducts()
+        {
+            var result = this.book.GetAllBook();
+
+            if (result.Equals(null))
+            {
+                return this.NotFound("no products found");
+            }
+
+            return this.Ok(new { result });
+
+        }
+
+
+
     }
 }
 

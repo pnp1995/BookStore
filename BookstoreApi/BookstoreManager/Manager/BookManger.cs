@@ -59,5 +59,21 @@ namespace BookstoreManager.Manager
             }
         }
 
+        public IList<BookModel> GetAllBook()
+        {
+            IList<BookModel> list = new List<BookModel>();
+            list = bookRepository.GetAllBook();
+
+            if (list != null)
+            {
+                return list;
+            }
+            else
+            {
+                throw new Exception();
+            }
+        }
+
+
     }
 }

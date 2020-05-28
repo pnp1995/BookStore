@@ -60,6 +60,29 @@ namespace BookstoreRepository.Repository
             return Task.Run(() => result);
         }
 
+        public IList<BookModel> GetAllBook()
+        {
+            try
+            {
+                IList<BookModel> bookList = new List<BookModel>();
+                bookList = this.userContext.BookTable.Select(x => new BookModel
+                {
+                    Bookid = x.Bookid,
+                    Bookname = x.Bookname,
+                    Description = x.Description,
+                    Author = x.Author,
+                    Price = x.Price,
+                    Image = x.Image,
+                    Review = x.Review,
+
+                }).ToList();
+                return bookList;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
 
 
     }
