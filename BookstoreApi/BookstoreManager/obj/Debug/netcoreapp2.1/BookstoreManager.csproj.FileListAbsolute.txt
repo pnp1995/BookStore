@@ -6,7 +6,6 @@ C:\BookstoreApi\BookstoreManager\bin\Debug\netcoreapp2.1\BookstoreManager.pdb
 C:\BookstoreApi\BookstoreManager\obj\Debug\netcoreapp2.1\BookstoreManager.csprojAssemblyReference.cache
 C:\BookstoreApi\BookstoreManager\obj\Debug\netcoreapp2.1\BookstoreManager.AssemblyInfoInputs.cache
 C:\BookstoreApi\BookstoreManager\obj\Debug\netcoreapp2.1\BookstoreManager.AssemblyInfo.cs
-C:\BookstoreApi\BookstoreManager\obj\Debug\netcoreapp2.1\BookstoreManager.csproj.CoreCompileInputs.cache
 C:\BookstoreApi\BookstoreManager\obj\Debug\netcoreapp2.1\BookstoreManager.dll
 C:\BookstoreApi\BookstoreManager\obj\Debug\netcoreapp2.1\BookstoreManager.pdb
 C:\BookstoreApi\BookstoreManager\obj\Debug\netcoreapp2.1\BookstoreManager.genruntimeconfig.cache
@@ -15,3 +14,4 @@ C:\BookstoreApi\BookstoreManager\bin\Debug\netcoreapp2.1\BookstoreRepository.dll
 C:\BookstoreApi\BookstoreManager\bin\Debug\netcoreapp2.1\BookstoreModel.pdb
 C:\BookstoreApi\BookstoreManager\bin\Debug\netcoreapp2.1\BookstoreRepository.pdb
 C:\BookstoreApi\BookstoreManager\obj\Debug\netcoreapp2.1\BookstoreManager.csproj.CopyComplete
+C:\BookstoreApi\BookstoreManager\obj\Debug\netcoreapp2.1\BookstoreManager.csproj.CoreCompileInputs.cache

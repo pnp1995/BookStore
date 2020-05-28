@@ -5,6 +5,7 @@ using BookstoreManager.Interface;
 using BookstoreRepository.Interface;
 using System.Threading.Tasks;
 using BookstoreModel.Model;
+using Microsoft.AspNetCore.Http;
 
 
 namespace BookstoreManager.Manager
@@ -31,5 +32,32 @@ namespace BookstoreManager.Manager
                 throw new Exception(ex.Message);
             }
         }
+
+        public  Task<BookModel> Image( int Bookid , IFormFile file)
+        {
+            try
+            {
+                var res = bookRepository.Image(Bookid, file);
+                return res;
+                //if (file != null && !Bookid.Equals(null))
+                //{
+                //    var result = await this.bookRepository.BookImageUpload(file, Bookid);
+
+                //    if (result != null)
+                //    {
+                //        return result;
+                //    }
+                //    else
+                //    {
+                //        throw new Exception("no image url returned");
+                //    }
+                //}           
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
     }
 }

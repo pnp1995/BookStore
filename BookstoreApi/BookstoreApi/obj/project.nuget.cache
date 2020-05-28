@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "9R6cLa12QYDLdbNQPKjadIEq50mzkxKdiehrMKK0M2t0xdLFXFJa6Ou17Pwy1/XAeMPhhZEALD4HZnTNp+0+bw==",
+  "dgSpecHash": "6XGWkuWHFe+9Ew3FmfHKweBR54KG+1Vsq/E+1j4uMPdjl/FZ7iamT5HPLgXIHUM9rAeMDXXk/ynI4WtznInaqw==",
   "success": true,
   "projectFilePath": "C:\\BookstoreApi\\BookstoreApi\\BookstoreApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Pritam\\.nuget\\packages\\cloudinarydotnet\\1.10.0\\cloudinarydotnet.1.10.0.nupkg.sha512",
     "C:\\Users\\Pritam\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Users\\Pritam\\.nuget\\packages\\microsoft.aspnetcore\\2.1.1\\microsoft.aspnetcore.2.1.1.nupkg.sha512",
     "C:\\Users\\Pritam\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.1.1\\microsoft.aspnetcore.antiforgery.2.1.1.nupkg.sha512",
@@ -172,7 +173,7 @@
     "C:\\Users\\Pritam\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Pritam\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\Pritam\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\Pritam\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\Pritam\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512",
     "C:\\Users\\Pritam\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
     "C:\\Users\\Pritam\\.nuget\\packages\\nuget.common\\5.6.0\\nuget.common.5.6.0.nupkg.sha512",
     "C:\\Users\\Pritam\\.nuget\\packages\\nuget.configuration\\5.6.0\\nuget.configuration.5.6.0.nupkg.sha512",
