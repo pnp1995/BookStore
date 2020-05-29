@@ -48,8 +48,18 @@ namespace BookstoreApi
             services.AddTransient<IBookRepository, BookRepository>();
 
 
-            //swagger
-            services.AddSwaggerGen(c =>
+
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+        
+
+
+        //swagger
+        services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info
                 {
@@ -119,6 +129,10 @@ namespace BookstoreApi
 
             app.UseAuthentication();
             app.UseHttpsRedirection();
+
+            app.UseCors("MyPolicy");
+
+          
 
             app.UseSwagger();
             app.UseSwaggerUI(c => {
