@@ -25,14 +25,16 @@ namespace BookstoreApi.Controllers
         [Route("add")]
         public async Task<IActionResult> Registration(UserModel userModel)
         {
-            try
+            var result = await account.Register(userModel);
+            if (!result.Equals(null))
             {
-                var result = await account.Register(userModel);
-                return this.Ok(new { result });
+
+                // var token = this.GenerateToken();
+                return this.Ok(new { success = true, data = result, message = "User Added" });
             }
-            catch (Exception ex)
+            else
             {
-                return this.BadRequest(ex.Message);
+                return this.BadRequest(new { success = false, result, message = "User could not be added" });
             }
         }
 
@@ -40,16 +42,28 @@ namespace BookstoreApi.Controllers
         [Route("login")]
         public async Task<IActionResult> Login(LoginModel loginModel)
         {
-            try
+            var result = await account.Login(loginModel);
+            if (!result.Equals(null))
             {
-                
-                var result = await account.Login(loginModel);
-                return this.Ok(new { result });
+
+                // var token = this.GenerateToken();
+                return this.Ok(new { success = true, data = result, message = "Login Successfully" });
             }
-            catch (Exception ex)
+            else
             {
-                return this.BadRequest(ex.Message);
+                return this.BadRequest(new { success = false, result, message = "Check your Credential" });
             }
+
+            //try
+            //{
+
+            //    var result = await account.Login(loginModel);
+            //    return this.Ok(new { result });
+            //}
+            //catch (Exception ex)
+            //{
+            //    return this.BadRequest(ex.Message);
+            //}
         }
         //[HttpGet, Microsoft.AspNetCore.Authorization.Authorize]
         //[Route("jwt")]

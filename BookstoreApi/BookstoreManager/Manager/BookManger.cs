@@ -25,7 +25,7 @@ namespace BookstoreManager.Manager
             try
             {
                 await this.bookRepository.AddBook(bookModel);
-                return "Add book Successfully";
+                return "Book Added Successfully";
             }
             catch (Exception ex)
             {
@@ -37,8 +37,8 @@ namespace BookstoreManager.Manager
         {
             try
             {
-                var res = bookRepository.ImageUpload(Bookid, file);
-                return res;
+                var result = bookRepository.ImageUpload(Bookid, file);
+                return result;
                 //if (file != null && !Bookid.Equals(null))
                 //{
                 //    var result = await this.bookRepository.BookImageUpload(file, Bookid);

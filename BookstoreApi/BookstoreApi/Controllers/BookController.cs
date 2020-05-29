@@ -26,31 +26,35 @@ namespace BookstoreApi.Controllers
         [Route("add")]
         public async Task<IActionResult> BookAdd(BookModel bookModel)
         {
-            try
+
+            var result = await book.AddBook(bookModel);
+
+            if (!result.Equals(null))
             {
-                var result = await book.AddBook(bookModel);
-                return this.Ok(new { result });
+
+                // var token = this.GenerateToken();
+                return this.Ok(new { success = true, data = result, message = "Book Added" });
             }
-            catch (Exception ex)
+            else
             {
-                return this.BadRequest(ex.Message);
+                return this.BadRequest(new { success = false, result, message = "Book could not be added" });
             }
+          
         }
 
         [HttpPost]
         [Route("image")]
         public IActionResult ImageUpload(int Bookid, IFormFile formFile)
         {
-            try
+            var result = book.ImageUpload(Bookid, formFile);
+            if(!result.Equals(null))
             {
-                var result = book.ImageUpload( Bookid, formFile);
-                return Ok(new { result });
+               
+                return Ok(new { success = true, data = result, message = "Image Added" });
             }
-            catch (Exception ex)
+            else
             {
-
-
-                return BadRequest(ex.Message);
+                return this.BadRequest(new { success = false, result, message = "Image could not be added" });
             }
         }
 
