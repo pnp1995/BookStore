@@ -3,15 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BookstoreRepository.Migrations
 {
-    public partial class BookTable : Migration
+    public partial class booktable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.RenameColumn(
-                name: "lastName",
-                table: "UserDetail",
-                newName: "LastName");
-
             migrationBuilder.CreateTable(
                 name: "BookTable",
                 columns: table => new
@@ -35,11 +30,6 @@ namespace BookstoreRepository.Migrations
         {
             migrationBuilder.DropTable(
                 name: "BookTable");
-
-            migrationBuilder.RenameColumn(
-                name: "LastName",
-                table: "UserDetail",
-                newName: "lastName");
         }
     }
 }

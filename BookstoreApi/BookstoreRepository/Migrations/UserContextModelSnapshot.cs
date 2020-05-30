@@ -41,6 +41,21 @@ namespace BookstoreRepository.Migrations
                     b.ToTable("BookTable");
                 });
 
+            modelBuilder.Entity("BookstoreModel.Model.CartModel", b =>
+                {
+                    b.Property<long>("Cartid")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<long>("Bookid");
+
+                    b.Property<int>("Count");
+
+                    b.HasKey("Cartid");
+
+                    b.ToTable("CartTable");
+                });
+
             modelBuilder.Entity("BookstoreModel.Model.UserModel", b =>
                 {
                     b.Property<int>("Userid")
@@ -57,7 +72,7 @@ namespace BookstoreRepository.Migrations
 
                     b.HasKey("Userid");
 
-                    b.ToTable("UserDetail");
+                    b.ToTable("UserTable");
                 });
 #pragma warning restore 612, 618
         }

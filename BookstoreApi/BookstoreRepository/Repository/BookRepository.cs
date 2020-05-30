@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace BookstoreRepository.Repository
 {
-   public class BookRepository : IBookRepository
+    public class BookRepository : IBookRepository
     {
         private readonly UserContext userContext;
         public BookRepository(UserContext userContext)
@@ -21,23 +21,23 @@ namespace BookstoreRepository.Repository
         }
 
 
-      public Task AddBook(BookModel bookModel)
-      { 
-
-        BookModel bookModel1 = new BookModel()
+        public Task AddBook(BookModel bookModel)
         {
-            Bookid = bookModel.Bookid,
-            Bookname = bookModel.Bookname,
-            Description = bookModel.Description,
-            Author = bookModel.Author,
-            Price = bookModel.Price,
-            Image = bookModel.Image,
-            Review = bookModel.Review,
 
-        };
+            BookModel bookModel1 = new BookModel()
+            {
+                Bookid = bookModel.Bookid,
+                Bookname = bookModel.Bookname,
+                Description = bookModel.Description,
+                Author = bookModel.Author,
+                Price = bookModel.Price,
+                Image = bookModel.Image,
+                Review = bookModel.Review,
+
+            };
             userContext.BookTable.Add(bookModel);
             return Task.Run(() => userContext.SaveChanges());
-      }
+        }
 
         public Task<BookModel> ImageUpload(int Bookid, IFormFile file)
         {

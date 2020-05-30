@@ -12,7 +12,11 @@ namespace BookstoreRepository.Context
         {
 
         }
-        public DbSet<UserModel> UserDetail { get; set; }
+        public DbSet<UserModel> UserTable { get; set; }
         public DbSet<BookModel> BookTable { get; set; }
+
+        public DbSet<CartModel> CartTable { get; set; }
+
+        //public DbSet<CustomerModel> CustomerTable { get; set; }
     }
 }

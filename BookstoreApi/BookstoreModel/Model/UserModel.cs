@@ -26,8 +26,8 @@ namespace BookstoreModel.Model
             set { this.lastName = value; }
             get { return this.lastName; }
         }
+
         private string emailid;
-        
         public string Emailid
         {
             set { this.emailid = value; }

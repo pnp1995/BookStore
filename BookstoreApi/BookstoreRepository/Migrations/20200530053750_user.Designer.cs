@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookstoreRepository.Migrations
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20200527094502_BookTable")]
-    partial class BookTable
+    [Migration("20200530053750_user")]
+    partial class user
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,33 +20,13 @@ namespace BookstoreRepository.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("BookstoreModel.Model.BookModel", b =>
+            modelBuilder.Entity("BookstoreModel.Model.UserModel", b =>
                 {
-                    b.Property<int>("Bookid")
+                    b.Property<int>("Userid")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Author");
-
-                    b.Property<string>("Bookname");
-
-                    b.Property<string>("Description");
-
-                    b.Property<string>("Image");
-
-                    b.Property<int>("Price");
-
-                    b.Property<string>("Review");
-
-                    b.HasKey("Bookid");
-
-                    b.ToTable("BookTable");
-                });
-
-            modelBuilder.Entity("BookstoreModel.Model.UserModel", b =>
-                {
-                    b.Property<string>("Emailid")
-                        .ValueGeneratedOnAdd();
+                    b.Property<string>("Emailid");
 
                     b.Property<string>("FirstName");
 
@@ -54,9 +34,9 @@ namespace BookstoreRepository.Migrations
 
                     b.Property<string>("Password");
 
-                    b.HasKey("Emailid");
+                    b.HasKey("Userid");
 
-                    b.ToTable("UserDetail");
+                    b.ToTable("UserTable");
                 });
 #pragma warning restore 612, 618
         }

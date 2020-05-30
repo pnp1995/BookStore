@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookstoreRepository.Migrations
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20200528125433_updatemodel")]
-    partial class updatemodel
+    [Migration("20200530062951_booktable")]
+    partial class booktable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -59,7 +59,7 @@ namespace BookstoreRepository.Migrations
 
                     b.HasKey("Userid");
 
-                    b.ToTable("UserDetail");
+                    b.ToTable("UserTable");
                 });
 #pragma warning restore 612, 618
         }

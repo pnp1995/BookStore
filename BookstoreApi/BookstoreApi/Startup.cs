@@ -47,7 +47,8 @@ namespace BookstoreApi
             services.AddTransient<IBook, BookManger>();
             services.AddTransient<IBookRepository, BookRepository>();
 
-
+            services.AddTransient<ICart, CartManager>();
+            services.AddTransient<ICartRepository, CartRepository>();
 
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {

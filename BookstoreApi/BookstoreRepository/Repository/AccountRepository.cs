@@ -18,7 +18,7 @@ namespace BookstoreRepository.Repository
         private readonly UserContext userContext;
         private readonly ApplicationSettings settings;
 
-        public AccountRepository(UserContext userContext ,IOptions<ApplicationSettings> _setting)
+        public AccountRepository(UserContext userContext, IOptions<ApplicationSettings> _setting)
         {
             this.userContext = userContext;
             settings = _setting.Value;
@@ -34,21 +34,21 @@ namespace BookstoreRepository.Repository
                 Emailid = userModel.Emailid,
                 Password = userModel.Password,
             };
-            userContext.UserDetail.Add(userModel1);
+            userContext.UserTable.Add(userModel1);
             return Task.Run(() => userContext.SaveChanges());
         }
 
         public async Task<string> Login(LoginModel login)
         {
-            var result = userContext.UserDetail.Where(i => i.Emailid == login.Emailid && i.Password == login.Password).SingleOrDefault();
-                if (result != null)
+            var result = userContext.UserTable.Where(i => i.Emailid == login.Emailid && i.Password == login.Password).SingleOrDefault();
+            if (result != null)
             {
                 var tokenhandler = new JwtSecurityTokenHandler();
                 var tokenDescriptor = new SecurityTokenDescriptor
                 {
                     Subject = new ClaimsIdentity(new Claim[]
                     {
-                       new Claim(ClaimTypes.Email,login.Emailid)
+                       //new Claim(ClaimTypes.Email,login.Emailid)
                     }),
                     Expires = DateTime.UtcNow.AddDays(20),
                     SigningCredentials = new SigningCredentials(

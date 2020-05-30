@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookstoreRepository.Migrations
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20200528123958_usermodel")]
-    partial class usermodel
+    [Migration("20200530064626_CartTable")]
+    partial class CartTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -43,10 +43,28 @@ namespace BookstoreRepository.Migrations
                     b.ToTable("BookTable");
                 });
 
+            modelBuilder.Entity("BookstoreModel.Model.CartModel", b =>
+                {
+                    b.Property<long>("Cartid")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<long>("Bookid");
+
+                    b.Property<int>("Count");
+
+                    b.HasKey("Cartid");
+
+                    b.ToTable("CartTable");
+                });
+
             modelBuilder.Entity("BookstoreModel.Model.UserModel", b =>
                 {
-                    b.Property<string>("Emailid")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("Userid")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Emailid");
 
                     b.Property<string>("FirstName");
 
@@ -54,11 +72,9 @@ namespace BookstoreRepository.Migrations
 
                     b.Property<string>("Password");
 
-                    b.Property<int>("Userid");
+                    b.HasKey("Userid");
 
-                    b.HasKey("Emailid");
-
-                    b.ToTable("UserDetail");
+                    b.ToTable("UserTable");
                 });
 #pragma warning restore 612, 618
         }
