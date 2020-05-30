@@ -50,6 +50,9 @@ namespace BookstoreApi
             services.AddTransient<ICart, CartManager>();
             services.AddTransient<ICartRepository, CartRepository>();
 
+            services.AddTransient<ICustomer, CustomerManager>();
+            services.AddTransient<ICustomerRepository, CustomerRepository>();
+
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
                 builder.AllowAnyOrigin()

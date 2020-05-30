@@ -17,6 +17,6 @@ namespace BookstoreRepository.Context
 
         public DbSet<CartModel> CartTable { get; set; }
 
-        //public DbSet<CustomerModel> CustomerTable { get; set; }
+        public DbSet<CustomerModel> CustomerTable { get; set; }
     }
 }
