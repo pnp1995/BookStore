@@ -1,6 +1,3 @@
-C:\BookstoreApi\BookstoreApi\bin\Debug\netcoreapp2.1\appsettings.Development.json
-C:\BookstoreApi\BookstoreApi\bin\Debug\netcoreapp2.1\appsettings.json
-C:\BookstoreApi\BookstoreApi\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
 C:\BookstoreApi\BookstoreApi\bin\Debug\netcoreapp2.1\BookstoreApi.deps.json
 C:\BookstoreApi\BookstoreApi\bin\Debug\netcoreapp2.1\BookstoreApi.runtimeconfig.json
 C:\BookstoreApi\BookstoreApi\bin\Debug\netcoreapp2.1\BookstoreApi.runtimeconfig.dev.json
@@ -15,11 +12,14 @@ C:\BookstoreApi\BookstoreApi\bin\Debug\netcoreapp2.1\BookstoreModel.pdb
 C:\BookstoreApi\BookstoreApi\obj\Debug\netcoreapp2.1\BookstoreApi.csprojAssemblyReference.cache
 C:\BookstoreApi\BookstoreApi\obj\Debug\netcoreapp2.1\BookstoreApi.AssemblyInfoInputs.cache
 C:\BookstoreApi\BookstoreApi\obj\Debug\netcoreapp2.1\BookstoreApi.AssemblyInfo.cs
+C:\BookstoreApi\BookstoreApi\obj\Debug\netcoreapp2.1\BookstoreApi.csproj.CoreCompileInputs.cache
 C:\BookstoreApi\BookstoreApi\obj\Debug\netcoreapp2.1\BookstoreApi.RazorAssemblyInfo.cache
 C:\BookstoreApi\BookstoreApi\obj\Debug\netcoreapp2.1\BookstoreApi.RazorAssemblyInfo.cs
 C:\BookstoreApi\BookstoreApi\obj\Debug\netcoreapp2.1\BookstoreApi.RazorTargetAssemblyInfo.cache
 C:\BookstoreApi\BookstoreApi\obj\Debug\netcoreapp2.1\BookstoreApi.csproj.CopyComplete
 C:\BookstoreApi\BookstoreApi\obj\Debug\netcoreapp2.1\BookstoreApi.dll
 C:\BookstoreApi\BookstoreApi\obj\Debug\netcoreapp2.1\BookstoreApi.pdb
+C:\BookstoreApi\BookstoreApi\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\BookstoreApi\BookstoreApi\bin\Debug\netcoreapp2.1\appsettings.json
+C:\BookstoreApi\BookstoreApi\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
 C:\BookstoreApi\BookstoreApi\obj\Debug\netcoreapp2.1\BookstoreApi.genruntimeconfig.cache
-C:\BookstoreApi\BookstoreApi\obj\Debug\netcoreapp2.1\BookstoreApi.csproj.CoreCompileInputs.cache

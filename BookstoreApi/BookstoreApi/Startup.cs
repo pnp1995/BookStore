@@ -38,6 +38,8 @@ namespace BookstoreApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            // Conect to Database
             services.AddDbContext<UserContext>(options => options.UseSqlServer(Configuration.GetConnectionString("IdentityConnection")));
             services.AddSingleton<IConfiguration>(Configuration);
  
@@ -45,46 +47,55 @@ namespace BookstoreApi
             services.AddTransient<IAccount,AccountManager>();
 
             services.AddTransient<IBook, BookManger>();
-            services.AddTransient<IBookRepository, BookRepository>();
+            services.AddTransient<IBookRepository, BookRepository>();      
 
             services.AddTransient<ICart, CartManager>();
             services.AddTransient<ICartRepository, CartRepository>();
 
             services.AddTransient<ICustomer, CustomerManager>();
             services.AddTransient<ICustomerRepository, CustomerRepository>();
-
+            // Enable CORS
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
                 builder.AllowAnyOrigin()
                        .AllowAnyMethod()
                        .AllowAnyHeader();
             }));
-        
 
 
-        //swagger
-        services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new Info
+         
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy("EnableCORS", builder =>
+            //    {
+            //        builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().AllowCredentials().Build();
+            //    });
+            //});
+
+
+            //swagger
+            services.AddSwaggerGen(c =>
                 {
-                    Version = "v1",
-                    Title = "FUNDOO NOTE API",
-                    Description = "ASP.NET Core Web API",
-                });
-                var security = new Dictionary<string, IEnumerable<string>>
-               {
+                    c.SwaggerDoc("v1", new Info
+                    {
+                        Version = "v1",
+                        Title = "Bookstore  API",
+                        Description = "ASP.NET Core Web API",
+                    });
+                    var security = new Dictionary<string, IEnumerable<string>>
+                   {
                    {"Bearer",new string[0]}
-               };
-                c.AddSecurityDefinition("Bearer", new ApiKeyScheme
-                {
-                    Description = "JWt Authorization header using the bearer scheme",
-                    Name = "Authorization",
-                    In = "header",
-                    Type = "apiKey"
+                   };
+                    //c.AddSecurityDefinition("Bearer", new ApiKeyScheme
+                    //{
+                    //    Description = "JWt Authorization header using the bearer scheme",
+                    //    Name = "Authorization",
+                    //    In = "header",
+                    //    Type = "apiKey"
+                    //});
+                    //c.AddSecurityRequirement(security);
+
                 });
-                //c.AddSecurityRequirement(security);
-                
-            });
 
             // configure strongly typed settings objects
             //var appSettingsSection = Configuration.GetSection("ApplicatonSetting");
@@ -96,7 +107,7 @@ namespace BookstoreApi
             services.Configure<ApplicationSettings>(Configuration.GetSection("ApplicatonSettings"));
 
             var Key = Encoding.UTF8.GetBytes(Configuration["ApplicatonSettings:JWT_Secret"].ToString());
-        services.AddAuthentication(x =>
+            services.AddAuthentication(x =>
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -127,16 +138,28 @@ namespace BookstoreApi
             {
                 app.UseHsts();
             }
+            //{
+            //    app.UseExceptionHandler("/Error");
+            //    app.UseHsts();
+            //}
 
-            app.UseHttpsRedirection();
-            app.UseMvc();
 
-            app.UseAuthentication();
-            app.UseHttpsRedirection();
+
+
 
             app.UseCors("MyPolicy");
 
-          
+            //app.UseCors("EnableCORS");
+            //app.UseCors(x => x
+            //        .AllowAnyOrigin()
+            //        .AllowAnyHeader().AllowAnyMethod()
+            //        );
+            app.UseAuthentication();
+            app.UseHttpsRedirection();
+            
+            
+            
+            app.UseMvc();
 
             app.UseSwagger();
             app.UseSwaggerUI(c => {

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using BookstoreManager.Interface;
 using BookstoreModel.Model;
-
+using Microsoft.AspNetCore.Cors;
 
 namespace BookstoreApi.Controllers
 {
@@ -57,10 +57,12 @@ namespace BookstoreApi.Controllers
                 return this.BadRequest(new { success = false, result, message = "Image could not be added" });
             }
         }
+        //[EnableCors("AnotherPolicy")]
 
+        //[EnableCors(origins: "*", headers: "*", methods: "*")]
         [HttpGet]
         [Route("list")]
-        public IActionResult GetProducts()
+        public IActionResult GetAllBook()
         {
             var result = this.book.GetAllBook();
 

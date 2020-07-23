@@ -13,6 +13,9 @@
         "packagesPath": "C:\\Users\\Pritam\\.nuget\\packages\\",
         "outputPath": "C:\\BookstoreApi\\BookstoreManager\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\Pritam\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -22,7 +25,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/ais-root/auth/e8335f60-7d20-4186-9a7e-08b6dbd6ad71/api/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.1": {
@@ -93,6 +97,9 @@
         "packagesPath": "C:\\Users\\Pritam\\.nuget\\packages\\",
         "outputPath": "C:\\BookstoreApi\\BookstoreModel\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\Pritam\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -102,7 +109,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/ais-root/auth/e8335f60-7d20-4186-9a7e-08b6dbd6ad71/api/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.1": {
@@ -162,6 +170,9 @@
         "packagesPath": "C:\\Users\\Pritam\\.nuget\\packages\\",
         "outputPath": "C:\\BookstoreApi\\BookstoreRepository\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\Pritam\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -171,7 +182,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/ais-root/auth/e8335f60-7d20-4186-9a7e-08b6dbd6ad71/api/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.1": {
